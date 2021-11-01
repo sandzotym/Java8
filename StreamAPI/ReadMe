@@ -1,0 +1,21 @@
+Stream API is used to process Collection of Objects
+
+Consumer Functional Interface takes object as i/p & performs some operation without returning any result.
+    Syntax - void accept(T t);
+
+Predicate Functional Interface is a true/false returning function.
+    Syntax - boolean Test(T t);
+
+Supplier Functional Interface takes no i/p but expects an o/p.
+    Syntax - T get();
+
+Stream is a sequence of objects supporting various methods which can be pipelined to produce desired results.
+It's not a Data Structure instead it takes i/p from the Collections, Arrays or I/O Channels.
+It don't change original data structure, they only provide the results as per the pipelined methods.
+    Functional Programming (Lambda)
+    Code Reducer
+    Bulk Operations : Massive Collection Objects
+
+Java Parallel Streams (traditional one is Sequential)
+    - Utilizing multiple cores of processor
+    - Order of execution isn't under our control.
