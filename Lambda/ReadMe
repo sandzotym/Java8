@@ -1,0 +1,12 @@
+Lambda Expression is the expression through which we can represent Anonymous Function.
+
+Anonymous Function is the one that don't have any name/modifier.
+    Even if you take the braces out, it will still work.
+    If it has a parameter, Lambda don't need to have the type e.g. (i) will work.
+    Lambda doesn't even need to have the "return".
+
+Functional Interface contains only 1 Abstract Method but can have multiple default & static methods.
+e.g. Runnable -> run()
+     Callable -> call()
+     Comparable -> compareTo()
+     Comparator -> compare()
