@@ -1,0 +1,32 @@
+map() & flatMap() both are intermediate methods & returns another stream as a part of o/p.
+
+map()
+    - Used for Data Transformation i.e. it process streams of values
+    - Stream<R> map(Stream<T> i/p) {}
+        <R> Stream<R> map(Function<? super T, ? extends R> mapper;
+    - its mapper function produces single value for each i/p value hence also called 1:1 Mapping
+
+flatMap()
+    - Used for Data Transformation & Flattening i.e. it process stream of stream of values
+    - map() + flattening
+    - Stream<R> map(Stream<T> i/p) {}
+        <R> Stream<R> flatMap(Function<? super T, ? extends stream<? extends R>> mapper;
+    - its mapper function produces multiple value for each i/p value hence also called 1:Many Mapping
+
+Data Transformation
+    stream.of("a", "b", "c", "d");    ->    [A, B, C, D]
+
+Flattening
+    [[1, 2], [3, 4], [5, 6], [7, 8]]  ->    [1, 2, 3, 4, 5, 6, 7, 8]
+
+Optional is used to handle null objects.
+
+Map-Reduce is a functional programming model that serves 2 purposes i.e.
+    - map -> transforming data
+    - reduce -> aggregating data (combining elements of a stream and produces single value)
+    - e.g. stream : [2, 4, 6, 9, 1, 3, 7] and we need sum of no.s present in stream
+        ~ map() -> transform Stream<obj> to Stream of int
+        ~ reduce() -> combine the stream of int and sum
+    - T reduce(T identity, Binary Operator <T> accumulator);
+        ~ T identity is the initial value of type T
+        ~ accumulator is the function for combining 2 values
